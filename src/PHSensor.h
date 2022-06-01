@@ -3,6 +3,7 @@ class PHSensor {
         int pin;
         double offset;
     public:
+        PHSensor() {}
         PHSensor(int pin) {
             this->pin = pin;
             offset = 0;
