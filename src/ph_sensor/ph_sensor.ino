@@ -1,5 +1,4 @@
-#include <PHSensor.h>
-#define OFFSET -7
+#define OFFSET -2
 
  class PHSensor {
     private:
@@ -37,7 +36,7 @@
             }
             double phValue = (double)avgValue*5.0/1024/6; //convert the analog into millivolt
             phValue = 3.5 * phValue + this->offset;
-            Serial.print(phValue,2); 
+            Serial.println(phValue,2); 
             digitalWrite(13, HIGH); 
             delay(800); 
             digitalWrite(13, LOW);
