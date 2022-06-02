@@ -7,8 +7,10 @@ class Relay {
   public:
     Relay() {}
     
-    Relay(int pin) {
+    Relay(int pin, double ph_target) {
       this->pin = pin;
+      this->ph_target = ph_target;
+      
       pinMode(pin, OUTPUT);
       digitalWrite(pin, LOW);
     }
